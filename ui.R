@@ -1,5 +1,6 @@
 library(shiny)
 library(googlesheets)
+library(plotly)
 
 shinyUI(fluidPage(
   
@@ -8,15 +9,15 @@ shinyUI(fluidPage(
   
   
   fluidRow(
-    column(3, plotOutput("knowFac")),
-    column(3, plotOutput("replFac")),
-    column(3, plotOutput("DPDFrate"))
+    column(4, plotOutput("knowFac")),
+    column(4, plotOutput("replFac")),
+    column(4, plotOutput("DPDFrate"))
            ),
   
       hr(),
   fluidRow(
-    column(6, plotOutput("knowbad")),
-    column(6, plotOutput("BadRepl"))
+    column(6, plotlyOutput("knowbad")),
+    column(6, plotlyOutput("BadRepl"))
     )
   )
 )
